@@ -15,7 +15,10 @@ document.getElementById('noakhali-button').addEventListener('click',function(eve
         const newBalance = balance + noakhaliaddMoney;
         document.getElementById('noakhali-balance').innerText = `${newBalance} BDT`;
 
-       
+      const availableBalance = getTextFieldById('available-balance');
+      const availableBalanceUpdate = availableBalance - newBalance;
+      document.getElementById('available-balance').innerText = `${availableBalanceUpdate} BDT`;
+
 
         // Show modal with donation success message
     document.getElementById('modal-donation-text').innerText = `${noakhaliaddMoney} BDT has been successfully donated. Thank you!`;
