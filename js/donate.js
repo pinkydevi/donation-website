@@ -61,6 +61,10 @@ document.getElementById('feni-button').addEventListener('click',function(event){
         const newBalance = balance + feniAddMoney;
         document.getElementById('feni-balance').innerText = `${newBalance} BDT`;
 
+        const availableBalance = getTextFieldById('available-balance');
+      const availableBalanceUpdate = availableBalance - newBalance;
+      document.getElementById('available-balance').innerText = `${availableBalanceUpdate} BDT`;
+
          // Show modal with donation success message
     document.getElementById('modal-donation-text').innerText = `${feniAddMoney} BDT has been successfully donated. Thank you!`;
     document.getElementById('donation-modal').classList.remove('hidden');
@@ -103,6 +107,9 @@ document.getElementById('quata-button').addEventListener('click',function(event)
         const newBalance = balance + quataAddMoney;
         document.getElementById('quata-balance').innerText = `${newBalance} BDT`;
 
+        const availableBalance = getTextFieldById('available-balance');
+      const availableBalanceUpdate = availableBalance - newBalance;
+      document.getElementById('available-balance').innerText = `${availableBalanceUpdate} BDT`;
         
          // Show modal with donation success message
     document.getElementById('modal-donation-text').innerText = `${quataAddMoney} BDT has been successfully donated. Thank you!`;
